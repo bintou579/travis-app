@@ -10,8 +10,6 @@ before_install:
   # install heroku CLI
   - wget -qO- https://toolbelt.heroku.com/install.sh | sh
 
-
-
 script:
   - HEROKU_API_KEY=$token heroku container:login
   - HEROKU_API_KEY=$token heroku container:push web --app $HEROKU_APP_NAME
